@@ -5,13 +5,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 body {
@@ -109,7 +113,7 @@ h1.a {
 
 /* Sobre nosaltres */
 #nosaltres {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem ;
 }
 
 .nosaltres-container {
@@ -143,44 +147,40 @@ h1.a {
 }
 
 /* Carta */
-
 #carta {
     padding: 4rem 2rem;
 }
 
 #carta h2 {
     padding-bottom: 20px;
+    text-align: center;
 }
 
-.parent {
+.container-menu {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+        "menus menus menus"
+        "menu1 explicacio-menu1 explicacio-menu1"
+        "menu1 imatge1-menu1 imatge2-menu1"
+        "menu2 explicacio-menu2 explicacio-menu2"
+        "menu2 imatge1-menu2 imatge2-menu2";
     gap: 8px;
-    max-width: 1200px;
     margin: 0 auto;
-    justify-content: center;
+    max-width: 1200px; /* Limita l'amplada en pantalles grans */
 }
 
 .div1 {
-    grid-column: span 5 / span 5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    grid-template-rows: auto;
+    grid-area: menus;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .div1 h1 {
-    top: 50%;
     color: black;
-    left: 50%;
 }
 
 .div2 {
-    grid-row: span 2 / span 2;
-    grid-row-start: 2;
+    grid-area: menu1;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 1rem;
@@ -191,8 +191,7 @@ h1.a {
 }
 
 .div3 {
-    grid-column: span 4 / span 4;
-    grid-row-start: 2;
+    grid-area: explicacio-menu1;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 1rem;
@@ -203,22 +202,17 @@ h1.a {
 }
 
 .div4 {
-    grid-column: span 2 / span 2;
-    grid-column-start: 2;
-    grid-row-start: 3;
+    grid-area: imatge1-menu1;
     padding: 0.5rem;
 }
 
 .div5 {
-    grid-column: span 2 / span 2;
-    grid-column-start: 4;
-    grid-row-start: 3;
+    grid-area: imatge2-menu1;
     padding: 0.5rem;
 }
 
 .div6 {
-    grid-row: span 2 / span 2;
-    grid-row-start: 4;
+    grid-area: menu2;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 1rem;
@@ -229,8 +223,7 @@ h1.a {
 }
 
 .div7 {
-    grid-column: span 4 / span 4;
-    grid-row-start: 4;
+    grid-area: explicacio-menu2;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 1rem;
@@ -241,16 +234,12 @@ h1.a {
 }
 
 .div8 {
-    grid-column: span 2 / span 2;
-    grid-column-start: 2;
-    grid-row-start: 5;
+    grid-area: imatge1-menu2;
     padding: 0.5rem;
 }
 
 .div9 {
-    grid-column: span 2 / span 2;
-    grid-column-start: 4;
-    grid-row-start: 5;
+    grid-area: imatge2-menu2;
     padding: 0.5rem;
 }
 
