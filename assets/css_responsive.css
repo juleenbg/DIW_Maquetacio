@@ -1,0 +1,179 @@
+@media only screen and (max-width: 768px) {
+    /* Header y navegació */
+    .logo {
+        display: none;
+    }
+
+    nav.menu-principal {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-principal ul {
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-contingut {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    /* Sobre nosaltres */
+    .nosaltres-item:first-child {
+        display: block;
+    }
+
+    .nosaltres-item:nth-child(2) {
+        flex-direction: row-reverse; /* Invertir l'ordre: L'imatge a l'esquerra.*/
+    }
+    
+    /* Carta */
+    .container-menu {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+    }
+    
+    /* Galeria */
+    .img-galeria {
+        width: 230px;
+    }
+    
+    .img-galeria:hover {
+        width: 230px;
+    }
+    
+    /* Formulari de reserva */
+    .reserva-form {
+        max-width: 600px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        bottom: 1rem;
+    }
+    
+    /* Footer */
+    .contact-item{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Canvis generals */
+    h1, h2, h3 {
+        text-align: center;
+    }
+    
+    /* Header y navegació */
+    .menu-principal {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+    
+    .menu-principal ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .logo {
+        width: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .header-contingut {
+        display: none;
+    }
+    
+    /* Sobre nosaltres */
+    #nosaltres {
+        padding: 3rem 1rem;
+    }
+    
+    .nosaltres-item {
+        display: block;
+    }
+    
+    /* Carta */
+    #carta {
+        padding: 3rem 1rem;
+    }
+    
+    .container-menu {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "menus"
+            "menu1"
+            "explicacio-menu1"
+            "imatge1-menu1"
+            "imatge2-menu1"
+            "menu2"
+            "explicacio-menu2"
+            "imatge1-menu2"
+            "imatge2-menu2";
+    }
+    
+    /* Galeria */
+    #galeria {
+        padding: 3rem 1rem;
+    }
+    
+    .img-galeria {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .img-galeria:hover {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Formulari de reserva */
+    #reserva {
+        padding: 3rem 1rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    button[type="submit"] {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        position: sticky;
+        bottom: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .footer-content .logo {
+        display: none;
+    }
+}
